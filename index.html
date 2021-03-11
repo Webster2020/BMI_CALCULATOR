@@ -26,15 +26,25 @@
         </h3>
       </div>
       <div class="calculator-inputs">
-        <input name="Height" class="input-height" placeholder="Input Your height [cm]" />
-        <input name="Weight" class="input-weight" placeholder="Input Your weight [kg]" />
+        <div class="wrapper">
+          <input type="number" name="Height" class="input-number input-height" placeholder="[cm] " />
+          <h3 class="input-title">Height [cm]</h3>
+        </div>
+        <div class="wrapper">
+          <input type="number" name="Weight" class="input-number input-weight" placeholder="[kg] " />
+          <h3 class="input-title">Weight [kg]</h3>
+        </div>
       </div>
       <div class="calculator-output">
         <div class="result"></div>
       </div>
-      <div class="calculator-button">
-        <button class="button btn-bmi">BMI</button>
-        <button class="button btn-reset">RESET</button>
+      <div class="calculator-buttons">
+        <div class="wrapper">
+          <button class="button btn-bmi">BMI</button>
+        </div>
+        <div class="wrapper">
+          <button class="button btn-reset">RESET</button>
+        </div>
       </div>
       <div class="calculator-proposal">xxx</div>
     </section>

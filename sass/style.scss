@@ -15,6 +15,7 @@ $border-w: 0px;
 $border-sec: $border-w solid yellow;
 $border-con: $border-w solid green;
 $border-con-inn: $border-w dotted blue;
+$border-con-inn-wrap: $border-w dotted orange;
 $border-con-inn-elem: $border-w dotted red;
 
 $transition: all 1s;
@@ -51,17 +52,17 @@ section {
   margin: 0 0 15px 0;
   .description-title {
     border: $border-con-inn-elem;
+    margin: 0 0 10px 0;
     font-family: $font-one;
     font-size: 32px;
-    margin: 0 0 10px 0;
   }
   .description-text {
     border: $border-con-inn-elem;
+    margin: 0;
     font-family: $font-two;
     font-size: 20px;
     letter-spacing: 2px;
     color: $color-six;
-    margin: 0;
   }
 }
 
@@ -69,11 +70,71 @@ section {
 
 .calculator-inputs {
   border: $border-con-inn;
-  .input-height {
-    border: $border-con-inn-elem;
-  }
-  .input-weight {
-    border: $border-con-inn-elem;
+  .wrapper {
+    border: $border-con-inn-wrap;
+    padding: 0;
+    .input-number {
+      display: inline-block;
+      border: 2px solid $color-two;
+      border-radius: 5px;
+      height: 40px;
+      width: 90px;
+      margin-left: 17px;
+      padding: 7px 7px 12px 7px;
+      font-size: 24px;
+      text-align: right;
+      letter-spacing: 3px;
+    }
+    .input-title {
+      border: $border-con-inn-elem;
+      display: inline-block;
+      height: 40px;
+      width: 130px;
+      margin: 0;
+      font-size: 20px;
+      color: $color-six;
+    }
+  } 
+}
+
+/* BUTTONS */
+
+.calculator-buttons {
+  border: $border-con-inn;
+  .wrapper {
+    border: $border-con-inn-wrap;
+    padding: 0;
+    .button {
+      border: $border-con-inn-elem;
+    }
+    .btn-bmi {
+      border: $border-con-inn-elem;
+      border: 5px solid $color-one;
+      border-radius: 10px;
+      background-color: $color-five;
+      height: 100px;
+      width: 210px;
+      margin: 20px auto;
+      padding: 30px 0;
+      font-family: $font-one;
+      font-size: 40px;
+      letter-spacing: 5px;
+      color: $color-one;
+    }
+    .btn-reset {
+      border: $border-con-inn-elem;
+      border: 5px solid $color-one;
+      border-radius: 7px;
+      background-color: $color-five;
+      height: 30px;
+      width: 210px;
+      margin: 0 0 20px 0;
+      padding: 3px 0;
+      font-family: $font-one;
+      font-size: 15px;
+      letter-spacing: 7px;
+      color: $color-one;
+    }
   }
 }
 
@@ -81,10 +142,7 @@ section {
 
 .calculator-output {
   border: $border-con-inn;
-  .btn-bmi {
-    border: $border-con-inn-elem;
-  }
-  .btn-reset {
+  .result {
     border: $border-con-inn-elem;
   }
 }
