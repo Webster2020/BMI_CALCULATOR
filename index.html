@@ -3,28 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <title>BMI calculator</title>
-    <link ref="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <section class="container">
       <div class="calculator-description">
         <h1 class="description-title">BMI CALCULATOR</h1>
         <h3 class="description-text">
-          Info how to insert data and how BMI is calculated...
+          Input Your height and weight
+        </h3>
+        <h3 class="description-text">
+          and then click button "BMI"
         </h3>
       </div>
       <div class="calculator-inputs">
-        <input name="Height" placeholder="Input Your height [cm]" />
-        <input name="Weight" placeholder="Input Your weight [kg]" />
+        <input name="Height" class="input-height" placeholder="Input Your height [cm]" />
+        <input name="Weight" class="input-weight" placeholder="Input Your weight [kg]" />
       </div>
       <div class="calculator-output">
         <div class="result"></div>
       </div>
       <div class="calculator-button">
-        <button class="button">BMI</button>
-        <button class="button reset">RESET</button>
+        <button class="button btn-bmi">BMI</button>
+        <button class="button btn-reset">RESET</button>
       </div>
-      <div class="calculator-proposal"></div>
+      <div class="calculator-proposal">xxx</div>
     </section>
   </body>
 </html>
