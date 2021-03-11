@@ -50,6 +50,7 @@ section {
 /* INPUTS */
 .calculator-inputs {
   border: 0px dotted blue;
+  margin: 10px auto;
 }
 
 .calculator-inputs .wrapper {
@@ -83,6 +84,7 @@ section {
 /* BUTTONS */
 .calculator-buttons {
   border: 0px dotted blue;
+  margin: 10px auto;
 }
 
 .calculator-buttons .wrapper {
@@ -127,13 +129,65 @@ section {
 /* OUTPUT */
 .calculator-output {
   border: 0px dotted blue;
+  margin: 0 10px;
 }
 
 .calculator-output .result {
   border: 0px dotted red;
+  font-size: 19px;
+  color: #576574;
+}
+
+.calculator-output .result .min-val {
+  border: 0px dashed black;
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  height: 30px;
+  width: 30px;
+  margin: 0 3px 0 0;
+  text-align: right;
+}
+
+.calculator-output .result .max-val {
+  border: 0px dashed black;
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  height: 30px;
+  width: 30px;
+  margin: 0 0 0 3px;
+  text-align: left;
+}
+
+.calculator-output .result .diagram {
+  border: 0px dashed black;
+  border: 2px solid black;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  height: 30px;
+  width: 220px;
+  background-image: linear-gradient(to right, red, yellow, green, yellow, red);
+}
+
+.calculator-output .result .diagram::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 105px;
+  height: 27px;
+  width: 3px;
+  background-color: black;
 }
 
 /* PROPOSAL */
 .calculator-proposal {
   border: 0px dotted blue;
+  margin: 0;
+  font-family: "Abel", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #576574;
 }

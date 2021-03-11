@@ -17,6 +17,7 @@ $border-con: $border-w solid green;
 $border-con-inn: $border-w dotted blue;
 $border-con-inn-wrap: $border-w dotted orange;
 $border-con-inn-elem: $border-w dotted red;
+$border-con-inn-elem-inn: $border-w dashed black;
 
 $transition: all 1s;
 
@@ -70,6 +71,7 @@ section {
 
 .calculator-inputs {
   border: $border-con-inn;
+  margin: 10px auto;
   .wrapper {
     border: $border-con-inn-wrap;
     padding: 0;
@@ -101,6 +103,7 @@ section {
 
 .calculator-buttons {
   border: $border-con-inn;
+  margin: 10px auto;
   .wrapper {
     border: $border-con-inn-wrap;
     padding: 0;
@@ -142,8 +145,50 @@ section {
 
 .calculator-output {
   border: $border-con-inn;
+  margin: 0 10px;
   .result {
     border: $border-con-inn-elem;
+    font-size: 19px;
+    color: $color-six;
+    .min-val {
+      border: $border-con-inn-elem-inn;
+      display: inline-block;
+      position: relative;
+      top: -4px;
+      height: 30px;
+      width: 30px;
+      margin: 0 3px 0 0;
+      text-align: right;
+    }
+    .max-val {
+      border: $border-con-inn-elem-inn;
+      display: inline-block;
+      position: relative;
+      top: -4px;
+      height: 30px;
+      width: 30px;
+      margin: 0 0 0 3px;
+      text-align: left;
+    }
+    .diagram {
+      border: $border-con-inn-elem-inn;
+      border: 2px solid $color-two;
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      height: 30px;
+      width: 220px;
+      background-image: linear-gradient(to right, red, yellow, green,yellow, red);
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 105px;
+        height: 27px;
+        width: 3px;
+        background-color: $color-two;
+      }
+    }
   }
 }
 
@@ -151,4 +196,10 @@ section {
 
 .calculator-proposal {
   border: $border-con-inn;
+  margin: 0;
+  font-family: $font-two;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: $color-six;
 }
