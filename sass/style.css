@@ -12,7 +12,7 @@ body {
 section {
   border: 0px solid yellow;
   border-radius: 15px;
-  margin: 30vh auto;
+  margin: 20vh auto;
   box-shadow: 0 0 15px #576574;
 }
 
@@ -100,7 +100,7 @@ section {
   border: 0px dotted red;
   border: 5px solid white;
   border-radius: 10px;
-  background-color: #222f3e;
+  background-color: #253949;
   height: 100px;
   width: 210px;
   margin: 20px auto;
