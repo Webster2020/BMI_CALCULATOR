@@ -185,9 +185,9 @@ section {
 .calculator-proposal {
   border: 0px dotted blue;
   margin: 0;
-  font-family: "Abel", sans-serif;
-  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
   letter-spacing: 2px;
   text-align: center;
-  color: #576574;
+  color: #222f3e;
 }
