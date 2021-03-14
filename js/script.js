@@ -47,9 +47,6 @@
   /* ---------------------------------------------------------------------- */
   /* function calculating bmiValue depending on weight and height */
   const bmiCalc = (wghValue, hghValue) => (wghValue / (hghValue * hghValue) / 0.0001).toFixed(2);
-  
-  /* ---------------------------------------------------------------------- */
-  /* function calculating position on diagram depending on bmiValue */
 
   /* ---------------------------------------------------------------------- */
   /* eventListener for button -> calculating BMI and dinamically changing color of button */
@@ -68,14 +65,17 @@
     const isCalculating = true;
     
     if (isCalculating) {
-      const getInputHghAction = document.querySelector(".input-height");  
+
+      const getInputHghAction = document.querySelector(".input-height"); 
+      const getInputWghAction = document.querySelector(".input-weight"); 
+
       getInputHghAction.addEventListener("input", () => {
         
         bmiValue = bmiCalc(inputWghValue, getInputHghAction.value);
         getInputValueButton.innerHTML = bmiValue;
         getInputValueButton.style.backgroundColor = changingColor(bmiValue)[0];
         diagPointer.style.left = changingColor(bmiValue)[1];
-        const getInputWghAction = document.querySelector(".input-weight");      
+        getInputWghAction = document.querySelector(".input-weight");      
         getInputWghAction.addEventListener("input", () => {
           
           bmiValue = bmiCalc(getInputWghAction.value, getInputHghAction.value);
@@ -83,6 +83,23 @@
           getInputValueButton.style.backgroundColor = changingColor(bmiValue)[0];
           diagPointer.style.left = changingColor(bmiValue)[1];
           
+        });
+      });
+
+      getInputWghAction.addEventListener("input", () => {
+        
+        bmiValue = bmiCalc(getInputWghAction.value, inputHghValue);
+        getInputValueButton.innerHTML = bmiValue;
+        getInputValueButton.style.backgroundColor = changingColor(bmiValue)[0];
+        diagPointer.style.left = changingColor(bmiValue)[1];
+        getInputHghAction = document.querySelector(".input-height");      
+        getInputHghAction.addEventListener("input", () => {
+          
+          bmiValue = bmiCalc(getInputWghAction.value, getInputHghAction.value);
+          getInputValueButton.innerHTML = bmiValue;
+          getInputValueButton.style.backgroundColor = changingColor(bmiValue)[0];
+          diagPointer.style.left = changingColor(bmiValue)[1]; 
+
         });
       });
     }
