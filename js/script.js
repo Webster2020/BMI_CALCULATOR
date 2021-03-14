@@ -1,6 +1,7 @@
 "use strict";
 
 /* ---------------------------------------------------------------------- */
+/* ----- BMI BUTTON ----- */
 {
   /* ---------------------------------------------------------------------- */
   /* function changing color depending on value od BMI */
@@ -50,7 +51,7 @@
 
   /* ---------------------------------------------------------------------- */
   /* eventListener for button -> calculating BMI and dinamically changing color of button */
-  const getInputValueButton = document.querySelector(".button");
+  const getInputValueButton = document.querySelector("button.btn-bmi");
   getInputValueButton.addEventListener("click", () => {
     
     const inputHghValue = Number(document.querySelector(".input-height").value);
@@ -106,5 +107,19 @@
   });
 }
 
-
-
+/* ---------------------------------------------------------------------- */
+/* ----- RESET BUTTON ----- */
+{
+  const resetButton = document.querySelector("button.btn-reset");
+  resetButton.addEventListener("click", ()  => {
+    const inputHghValue = document.querySelector(".input-height");
+    const inputWghValue = document.querySelector(".input-weight");
+    const bmiButton = document.querySelector("button.btn-bmi");
+    const diagPointer = document.querySelector(".pointer");
+    inputHghValue.value = "";
+    inputWghValue.value = "";
+    bmiButton.style.backgroundColor = "rgb(37, 57, 73)";
+    bmiButton.innerHTML = "BMI";
+    diagPointer.style.left = "35px";
+  })
+}
