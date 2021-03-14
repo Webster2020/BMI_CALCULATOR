@@ -6,6 +6,7 @@ $color-three: #1dd1a1;
 $color-four: #10ac84;
 $color-five: #222f3e;
 $color-six: #576574;
+$color-seven: #36506d;
 
 $font-one: "Josefin Sans", sans-serif;
 $font-two: "Abel", sans-serif;
@@ -107,36 +108,31 @@ section {
   .wrapper {
     border: $border-con-inn-wrap;
     padding: 0;
-    .button {
-      border: $border-con-inn-elem;
-    }
-    .btn-bmi {
+    button.button {
       border: $border-con-inn-elem;
       border: 5px solid $color-one;
+      font-family: $font-one;
+      color: $color-one;
+    }
+    button.btn-bmi {   
       border-radius: 10px;
       background-color: rgb(37, 57, 73);
       height: 100px;
       width: 210px;
       margin: 20px auto;
-      padding: 30px 0;
-      font-family: $font-one;
+      padding: 30px 0; 
       font-size: 40px;
-      letter-spacing: 5px;
-      color: $color-one;
+      letter-spacing: 5px;    
     }
-    .btn-reset {
-      border: $border-con-inn-elem;
-      border: 5px solid $color-one;
+    button.btn-reset {
       border-radius: 7px;
       background-color: $color-five;
       height: 30px;
       width: 210px;
       margin: 0 0 20px 0;
       padding: 3px 0;
-      font-family: $font-one;
       font-size: 15px;
       letter-spacing: 7px;
-      color: $color-one;
     }
   }
 }

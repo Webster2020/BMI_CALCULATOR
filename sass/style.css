@@ -92,38 +92,33 @@ section {
   padding: 0;
 }
 
-.calculator-buttons .wrapper .button {
-  border: 0px dotted red;
-}
-
-.calculator-buttons .wrapper .btn-bmi {
+.calculator-buttons .wrapper button.button {
   border: 0px dotted red;
   border: 5px solid white;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+}
+
+.calculator-buttons .wrapper button.btn-bmi {
   border-radius: 10px;
   background-color: #253949;
   height: 100px;
   width: 210px;
   margin: 20px auto;
   padding: 30px 0;
-  font-family: "Josefin Sans", sans-serif;
   font-size: 40px;
   letter-spacing: 5px;
-  color: white;
 }
 
-.calculator-buttons .wrapper .btn-reset {
-  border: 0px dotted red;
-  border: 5px solid white;
+.calculator-buttons .wrapper button.btn-reset {
   border-radius: 7px;
   background-color: #222f3e;
   height: 30px;
   width: 210px;
   margin: 0 0 20px 0;
   padding: 3px 0;
-  font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
   letter-spacing: 7px;
-  color: white;
 }
 
 /* OUTPUT */

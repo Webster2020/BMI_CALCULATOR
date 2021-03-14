@@ -146,7 +146,7 @@
 /* ----- RESET BUTTON ----- */
 {
   const resetButton = document.querySelector("button.btn-reset");
-  resetButton.addEventListener("click", ()  => {
+  resetButton.addEventListener("click", (e)  => {
     const inputHghValue = document.querySelector(".input-height");
     const inputWghValue = document.querySelector(".input-weight");
     const bmiButton = document.querySelector("button.btn-bmi");
@@ -160,3 +160,33 @@
     proposal.innerHTML = "";
   })
 }
+
+/* ---------------------------------------------------------------------- */
+/* ----- BUTTON CLICK ANIMATION ----- */
+/* TODO */
+/* if bmi button is cliced -> dont change color and bcColor*/
+{
+  const buttons = document.querySelectorAll("button.button");
+  for (let button of buttons) {
+    console.log(button);
+    button.addEventListener("mouseover", (e) => {
+    console.log(button);
+    button.style.boxShadow = "0 0 25px #222f3e";
+    })
+    button.addEventListener("mousedown", (e) => {
+    console.log(button);
+    button.style.boxShadow = "0 0 10px #222f3e";
+    })
+    button.addEventListener("mouseup", (e) => {
+    console.log(button);
+    button.style.boxShadow = "0 0 0 #222f3e";
+    })
+    button.addEventListener("mouseout", (e) => {
+    console.log(button);
+    button.style.boxShadow = "0 0 0 #222f3e";
+    })
+  }
+}
+/* ---------------------------------------------------------------------- */
+/* TODO */
+/* ----- WHAT IF INPUT IS NO A NUMBER AND IS LESS THAN ZERO ----- */
