@@ -118,7 +118,7 @@ section {
       border-radius: 10px;
       background-color: rgb(37, 57, 73);
       height: 100px;
-      width: 210px;
+      min-width: 210px;
       margin: 20px auto;
       padding: 30px 0; 
       font-size: 40px;
@@ -136,6 +136,8 @@ section {
     }
   }
 }
+
+
 
 /* OUTPUT */
 
@@ -198,4 +200,12 @@ section {
   letter-spacing: 2px;
   text-align: center;
   color: $color-five;
+}
+
+/* @MEDIA */
+
+@media (max-width: 576px) {
+  body {
+    background-color: $color-seven;
+  }
 }

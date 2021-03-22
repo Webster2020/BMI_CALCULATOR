@@ -68,74 +68,61 @@
   const bmiCalc = (wghValue, hghValue) => (wghValue / (hghValue * hghValue) / 0.0001).toFixed(2);
 
   /* ---------------------------------------------------------------------- */
-  /* function adding proposal text depending on bmiValue */
-  
-
-
-  /* ---------------------------------------------------------------------- */
   /* eventListener for button -> calculating BMI and dinamically changing color of button */
   const getInputValueButton = document.querySelector("button.btn-bmi");
-  getInputValueButton.addEventListener("click", (e) => {
+
+  getInputValueButton.addEventListener("click", () => {
     
     const inputHghValue = Number(document.querySelector(".input-height").value);
     const inputWghValue = Number(document.querySelector(".input-weight").value);
     const diagPointer = document.querySelector(".diagram .pointer");
     const proposal = document.querySelector(".calculator-proposal");
-    //let bmiValue = (inputWghValue / (inputHghValue * inputHghValue) / 0.0001).toFixed(2);
+
     let bmiValue = bmiCalc(inputWghValue, inputHghValue);
     getInputValueButton.innerHTML = bmiValue;   
     getInputValueButton.style.backgroundColor = changingPrefer(bmiValue)[0];
     diagPointer.style.left = changingPrefer(bmiValue)[1];
     proposal.innerHTML = changingPrefer(bmiValue)[2];
     const isCalculating = true;
-    //console.log("Proposal: " + proposal.innerHTML);
-    //console.log("Proposal: " + changingPrefer(bmiValue)[2]);
-    console.log(`Button click: \nHgh = ${inputHghValue} \nWgh = ${inputWghValue}`);
 
     if (isCalculating) {
 
       const getInputHghAction = document.querySelector(".input-height"); 
       const getInputWghAction = document.querySelector(".input-weight"); 
 
-      getInputHghAction.addEventListener("input", (e) => {
+      getInputHghAction.addEventListener("input", () => {
         
         bmiValue = bmiCalc(inputWghValue, getInputHghAction.value);
         getInputValueButton.innerHTML = bmiValue;
         getInputValueButton.style.backgroundColor = changingPrefer(bmiValue)[0];
         diagPointer.style.left = changingPrefer(bmiValue)[1];
-        proposal.innerHTML = changingPrefer(bmiValue)[2];
-        //getInputWghAction = document.querySelector(".input-weight");
-        console.log(`Input hgh click: \nHgh = ${getInputHghAction.value} \nWgh = ${inputWghValue}`);      
-        getInputWghAction.addEventListener("input", (e) => {
+        proposal.innerHTML = changingPrefer(bmiValue)[2];   
+
+        getInputWghAction.addEventListener("input", () => {
           
           bmiValue = bmiCalc(getInputWghAction.value, getInputHghAction.value);
           getInputValueButton.innerHTML = bmiValue;
           getInputValueButton.style.backgroundColor = changingPrefer(bmiValue)[0];
           diagPointer.style.left = changingPrefer(bmiValue)[1];
-          proposal.innerHTML = changingPrefer(bmiValue)[2];
-          console.log(`Input hgh -> wgh click: \nHgh = ${getInputHghAction.value} \nWgh = ${getInputWghAction.value}`);    
-          
+          proposal.innerHTML = changingPrefer(bmiValue)[2];       
         });
       });
 
-      getInputWghAction.addEventListener("input", (e) => {
+      getInputWghAction.addEventListener("input", () => {
         
         bmiValue = bmiCalc(getInputWghAction.value, inputHghValue);
         getInputValueButton.innerHTML = bmiValue;
         getInputValueButton.style.backgroundColor = changingPrefer(bmiValue)[0];
         diagPointer.style.left = changingPrefer(bmiValue)[1];
-        proposal.innerHTML = changingPrefer(bmiValue)[2];
-        //getInputHghAction = document.querySelector(".input-height"); 
-        console.log(`Input wgh click: \nHgh = ${inputHghValue} \nWgh = ${getInputWghAction.value}`);     
-        getInputHghAction.addEventListener("input", (e) => {
+        proposal.innerHTML = changingPrefer(bmiValue)[2]; 
+
+        getInputHghAction.addEventListener("input", () => {
           
           bmiValue = bmiCalc(getInputWghAction.value, getInputHghAction.value);
           getInputValueButton.innerHTML = bmiValue;
           getInputValueButton.style.backgroundColor = changingPrefer(bmiValue)[0];
           diagPointer.style.left = changingPrefer(bmiValue)[1];
           proposal.innerHTML = changingPrefer(bmiValue)[2]; 
-          console.log(`Input wgh -> hgh click: \nHgh = ${getInputHghAction.value} \nWgh = ${getInputWghAction.value}`);
-
         });
       });
     }
@@ -146,7 +133,7 @@
 /* ----- RESET BUTTON ----- */
 {
   const resetButton = document.querySelector("button.btn-reset");
-  resetButton.addEventListener("click", (e)  => {
+  resetButton.addEventListener("click", ()  => {
     const inputHghValue = document.querySelector(".input-height");
     const inputWghValue = document.querySelector(".input-weight");
     const bmiButton = document.querySelector("button.btn-bmi");
@@ -163,27 +150,22 @@
 
 /* ---------------------------------------------------------------------- */
 /* ----- BUTTON CLICK ANIMATION ----- */
-/* TODO */
-/* if bmi button is cliced -> dont change color and bcColor*/
+
 {
   const buttons = document.querySelectorAll("button.button");
   for (let button of buttons) {
-    console.log(button);
-    button.addEventListener("mouseover", (e) => {
-    console.log(button);
-    button.style.boxShadow = "0 0 25px #222f3e";
+    
+    button.addEventListener("mouseover", () => {
+      button.style.boxShadow = "0 0 25px #222f3e";
     })
-    button.addEventListener("mousedown", (e) => {
-    console.log(button);
-    button.style.boxShadow = "0 0 10px #222f3e";
+    button.addEventListener("mousedown", () => {   
+      button.style.boxShadow = "0 0 10px #222f3e";
     })
-    button.addEventListener("mouseup", (e) => {
-    console.log(button);
-    button.style.boxShadow = "0 0 0 #222f3e";
+    button.addEventListener("mouseup", () => { 
+      button.style.boxShadow = "0 0 0 #222f3e";
     })
-    button.addEventListener("mouseout", (e) => {
-    console.log(button);
-    button.style.boxShadow = "0 0 0 #222f3e";
+    button.addEventListener("mouseout", () => {
+      button.style.boxShadow = "0 0 0 #222f3e";
     })
   }
 }
