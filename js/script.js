@@ -10,7 +10,6 @@
     let colorTwo = 0;
     let pointerMove = 0;
     let proposal = "Please input Your height and weight!";
-    //bmiValue > 25 ? colorOne = 255 : colorOne = 0;
     if (bmiValue < 15) {
       colorOne = 250;
       colorTwo = 0;
@@ -18,16 +17,16 @@
       proposal = "Severe Thinness";
     } else if (bmiValue >= 15 && bmiValue < 16) {
       colorOne = 250;
-      colorTwo = 125 * bmiValue - 1875; //from 125(16) to 0(15)
+      colorTwo = 125 * bmiValue - 1875; 
       pointerMove = 4.5 * (bmiValue - 21.75) + 32;
       proposal = "Severe Thinness";
     } else if (bmiValue >= 16 && bmiValue < 17) {
       colorOne = 250;
-      colorTwo = 125 * bmiValue - 1875; //from 250(17) to 125(16)
+      colorTwo = 125 * bmiValue - 1875; 
       pointerMove = 4.5 * (bmiValue - 21.75) + 32;
       proposal = "Moderate Thinness";
     } else if (bmiValue >= 17 && bmiValue < 18.5) {
-      colorOne = - 167 * bmiValue + 3083; //from 250(17) to 0(18.5)
+      colorOne = - 167 * bmiValue + 3083; 
       colorTwo = 250;
       pointerMove = 4.5 * (bmiValue - 21.75) + 35;
       proposal = "Mild Thinness";
@@ -37,18 +36,18 @@
       pointerMove = 5 * (bmiValue - 21.75) + 35;
       proposal = "Normal";
     } else if (bmiValue >= 25 && bmiValue < 30) {
-      colorOne = 50 * bmiValue - 1250; //from 0(25) to 250(30)
+      colorOne = 50 * bmiValue - 1250; 
       colorTwo = 250;
       pointerMove = 8 * (bmiValue - 21.75) + 30;
       proposal = "Overweight";
     } else if (bmiValue >= 30 && bmiValue < 35) {
       colorOne = 250;
-      colorTwo = - 25 * bmiValue + 1000; //from 250(30) to 125(35)
+      colorTwo = - 25 * bmiValue + 1000; 
       pointerMove = 9.5 * (bmiValue - 21.75) + 20;
       proposal = "Obese Class I";
     } else if (bmiValue >= 35 && bmiValue < 40) {
       colorOne = 250;
-      colorTwo = - 25 * bmiValue + 1000; //from 125(35) to 0(40)
+      colorTwo = - 25 * bmiValue + 1000; 
       pointerMove = 9.5 * (bmiValue - 21.75) + 20;
       proposal = "Obese Class II";
     } else if (bmiValue >= 40) {
@@ -150,7 +149,6 @@
 
 /* ---------------------------------------------------------------------- */
 /* ----- BUTTON CLICK ANIMATION ----- */
-
 {
   const buttons = document.querySelectorAll("button.button");
   for (let button of buttons) {
@@ -171,4 +169,4 @@
 }
 /* ---------------------------------------------------------------------- */
 /* TODO */
-/* ----- WHAT IF INPUT IS NO A NUMBER AND IS LESS THAN ZERO ----- */
+/* ----- WHAT IF INPUT VALUE IS NOT A NUMBER OR IS LESS THAN ZERO ----- */
